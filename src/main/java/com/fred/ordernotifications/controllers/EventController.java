@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EventController {
     private final JmsMessageSender jmsMessageSender;
 
+    // Autowiring in constructor allows whatever bean you've registered to be injected in automatically.
     @Autowired
     public EventController(JmsMessageSender jmsMessageSender) {
         this.jmsMessageSender = jmsMessageSender;

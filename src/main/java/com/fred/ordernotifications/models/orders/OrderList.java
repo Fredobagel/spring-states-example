@@ -16,6 +16,7 @@ public class OrderList {
     @GeneratedValue
     private UUID id;
 
+    // Marking it OneToMany creates ID columns which allows joins
     @OneToMany
     private List<Allocation> allocations;
 }

@@ -5,6 +5,8 @@ import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+// Lombok - Data generates Getters, Setters and implements Equals method automatically without making your model
+// 200 lines long
 @Data
 public class OrderTriggerEvent implements Serializable {
     private static final long serialVersionUID = 4L;
