@@ -1,11 +1,9 @@
 package com.fred.ordernotifications.models.orders;
 
 import lombok.Data;
+import org.hibernate.annotations.Cascade;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 import java.util.UUID;
 
@@ -17,6 +15,6 @@ public class OrderList {
     private UUID id;
 
     // Marking it OneToMany creates ID columns which allows joins
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Allocation> allocations;
 }

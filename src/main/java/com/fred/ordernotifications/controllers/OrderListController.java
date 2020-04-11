@@ -27,6 +27,6 @@ public class OrderListController {
 
     @GetMapping("/orderList/{orderListId}")
     public OrderList getOrderListById(@PathVariable("orderListId") String orderListId) {
-        return orderListRepository.getOne(UUID.fromString(orderListId));
+        return orderListRepository.findById(UUID.fromString(orderListId)).orElse(null);
     }
 }
